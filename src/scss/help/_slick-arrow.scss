@@ -1,0 +1,72 @@
+.slick{
+    &-arrow{
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        background-color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: .3s;
+        &:hover{
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;    
+            &::before, &::after{
+                background: #548b51;
+            } 
+        }
+        &:before{
+            content: "";
+            position: absolute;
+            display: block;
+            width: 16px;
+            height: 3px;
+            background:  #85c847;
+            transform: rotate(45deg);
+            transition: .3s;
+            top: 30px;
+            opacity: 1;
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            display: block;
+            width: 16px;
+            height: 3px;
+            background:  #85c847;
+            transform: rotate(-45deg);
+            transition: .3s;
+            bottom: 29px;
+            opacity: 1;
+        }
+    }
+    &-prev{
+        left: -82px;
+        z-index: 1;
+        @include media(1370){
+            bottom: -60px;
+            top: auto;
+            left: 30%;
+            transform: translateX(-50%);
+        }
+        @include media(450){
+            left: 20%;
+            bottom: -80px;
+        }
+    }
+    &-next{
+        right: -82px;
+        z-index: 1;
+        transform: translate(0,-50%) rotate(180deg);
+        @include media(1370){
+            bottom: -60px;
+            top: auto;
+            left: 70%;
+            transform: translateX(-50%) rotate(180deg);
+        }
+        @include media(450){
+            left: 80%;
+            bottom: -80px;
+        }
+    }
+}

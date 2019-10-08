@@ -1,0 +1,111 @@
+.b-top{
+    padding-top: 110px;
+    @include media(768){
+        padding-top: 74px;
+    }
+    &__content{
+        padding: 90px 0;
+        background: url("img/bg_slider.png") no-repeat center/cover;
+        &-inner{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 60px;
+            h1{
+                max-width: 855px;
+                margin: 0 auto 18px;
+                @include media(768){
+                    font-size: 20px;
+                    font-weight: 700;
+                    letter-spacing: 0.75px;
+                    line-height: 29px;     
+                    max-width: 288px;
+                }
+            }
+        }
+        &-logo{
+            margin-bottom: 25px;
+        }
+    }
+    &__all-btn{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        span{
+            display: block;
+            color: #7b4e85;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        img{
+            transition: .3s;
+        }
+        &:hover{
+            img{
+                transform: translateY(5px);
+            }
+        }
+    }
+    &__desc{
+        transform: translateY(-60px);
+        &-row{
+            padding: 60px 70px;
+            background: white;
+            @include media(768){
+                padding: 30px;
+            }
+        }
+        &-right{
+            width: 50%;
+            @include media(900){
+                width: 100%;
+                margin-top: 50px;
+            }
+            p{
+                color: #515151;
+                font-family: $fSans;
+                font-size: 16px;
+                line-height: 27px;
+                margin-bottom: 20px;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+        }
+        &-left{
+            width: 50%;
+            @include media(900){
+                width: 100%;
+            }
+            h2{
+                max-width: 370px;
+                display: flex;
+                position: relative;
+                @include media(900){
+                    max-width: 100%;
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    right: -80px;
+                    top: 10px;
+                    display: block;
+                    width: 80px;
+                    height: 5px;
+                    border-radius: 3px;
+                    background-color: #85c847;
+                    @include media(1100){
+                        top: auto;
+                        left: 0;
+                        bottom: -20px;
+                        right: auto;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,73 @@
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    cursor: pointer;
+    max-width: 182px;
+    padding: 16px 25px;
+    border-radius: 26px;
+    color: white; 
+    outline: none;
+    font-family: $fSans;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    transition: .3s;
+    &-green{
+        background-color: #85c847; 
+        box-shadow: 0 11px 17px rgba(0, 0, 0, .26);
+        &:hover{
+            background-color: #9ce05e;
+        }
+    }
+    &-purple{
+        background-color: #7b4e85;    
+        box-shadow: 0 11px 13px rgba(0, 0, 0, .26);
+        &:hover{
+            background-color: #9866a4;
+        }
+    }
+    &-icon{
+        max-width: 240px;
+        width: auto;
+        padding: 15px 15px 15px 22px;
+        margin-top: 20px;
+        display: block;
+        width: 100%;
+        border-radius: 25px;
+        border: 2px solid #93d754;
+        position: relative;
+        color: #548b51;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: .2px;
+        text-transform: uppercase;
+        transition: .3s;  
+        .icon{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 100%;
+            border-radius: 24px;
+            background-color: #93d754;
+            position: absolute;
+            right: -1px;
+            top: 0;
+            .arrow{
+                &::before, &::after{
+                    background: white;
+                }
+            }
+        }
+        &:hover{
+            background-color: #85c847;
+            color: #fff;
+            .icon{
+                background-color: #93d754;   
+            }
+        }
+    }
+}

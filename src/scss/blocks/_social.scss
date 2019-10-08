@@ -1,0 +1,49 @@
+.social{
+    &__item{
+        a{
+            display: block;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            &:hover{
+                box-shadow: 0 4px 17px rgba(0, 0, 0, 0.1);
+            }
+            &.telegram{
+                background: url("img/icon/telegram.svg") no-repeat 9px, #ffffff;
+                &:hover{
+                    background: url("img/icon/telegram-h.svg") no-repeat 9px, #ffffff;
+                }
+            }
+            &.instagram{
+                background: url("img/icon/inst.svg") no-repeat 13px, #ffffff;
+                &:hover{
+                    background: url("img/icon/inst-h.svg") no-repeat 13px, #ffffff;
+                }   
+            }
+            &.youtube{
+                background: url("img/icon/youtube.svg") no-repeat 10px, #ffffff;
+                &:hover{
+                    background: url("img/icon/youtube-h.svg") no-repeat 10px, #ffffff;
+                }      
+            }
+            &.vk{
+                background: url("img/icon/vk.svg") no-repeat 10px, #ffffff;
+                &:hover{
+                    background: url("img/icon/vk-h.svg") no-repeat 10px, #ffffff;
+                }      
+            }
+        }
+    }
+    &__fix{
+        position: fixed;
+        right: 12%;
+        top: 20%;
+        z-index: 4;
+        @include media(768){
+            display: none;
+        }
+        li{
+            margin-bottom: 15px;
+        }
+    }
+}

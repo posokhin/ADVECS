@@ -1,0 +1,175 @@
+.feedback{
+    padding: 45px 0 30px;
+    background: url("img/feedback.png") no-repeat center , #7b4e85;
+
+    &__left{
+        width: 50%;
+        color: white;
+        @include media(768){
+            width: 100%;
+            margin-bottom: 50px;
+        }
+        h2{
+            color: #ffffff;
+            position: relative;
+            &::after{
+                content: "";
+                display: block;
+                width: 80px;
+                height: 5px;
+                border-radius: 3px;
+                background-color: #85c847;
+                position: absolute;
+                right: -80px;
+                top: 50%;
+                transform: translateY(-50%);
+                @include media(980){
+                    bottom: -20px;
+                    top: auto;
+                    transform: none;
+                    left: 0;
+                }
+            }
+        }
+    }
+    &__list{
+        margin: 35px 0 50px;
+        @include media(768){
+            display: flex;
+            flex-wrap: wrap;
+            margin: 50px -15px 20px;
+        }
+        @include media(450){
+            margin: 50px 0 0;
+        }
+    }
+    &__item{
+        margin-bottom: 20px;
+        max-width: 300px;
+        @include media(768){
+            max-width: 100%;
+            width: 50%;
+            padding: 0 15px;
+        }
+        @include media(450){
+            width: 100%;
+            padding: 0;
+        }
+        span{
+            display: block;
+            width: 90%;
+            margin-left: 20px;
+            font-family: $fMons;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 22px;
+        }
+        img{
+            width: 20px;
+            height: 20px;
+        }
+    }
+    &__link{
+        &:hover{
+            color: #93d754;   
+        }
+    }
+    &__right{
+        width: 50%;
+        position: relative;
+        @include media(768){
+            width: 100%;
+        }
+        &::before{
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: #85c847;
+            position: absolute;
+            top: -15px;
+            left: 15px;
+        }
+    }
+    &__form{
+        box-shadow: 0 10px 20px rgba(29, 17, 86, 0.12);
+        border-radius: 0 100px 0 0;
+        background-color: #ffffff;
+        position: relative;
+        z-index: 1;
+        padding: 40px;
+        @include media(500){
+            padding: 20px;
+        }
+        h2{
+            text-align: center;
+            max-width: 300px;
+            margin: 0 auto 18px;
+        }
+        label{
+            margin-bottom: 24px;
+            display: block;
+            &.error{
+                input,textarea{
+                    border: 1px solid #d0021b;
+                }
+                .error-text{
+                    display: block;
+                }
+            }
+            .error-text{
+                display: none;
+                color: #d0021b;
+                font-family: $fSans;
+                font-size: 9px;
+                letter-spacing: 0.5px;
+                margin-top: 3px;     
+            }
+            input{
+                display: block;
+                width: 100%;
+                border-radius: 4px;
+                border: 1px solid rgba(13, 50, 93, .2);
+                padding: 15px 20px;
+                color: #4a4a4a;
+            }
+            textarea{
+                display: block;
+                width: 100%;
+                height: 137px;
+                border: 1px solid rgba(13, 50, 93, .2);
+                color: #4a4a4a;
+                border-radius: 4px;
+                padding: 15px 20px;
+                resize: none;
+            }
+        }
+        button{
+            margin: 20px auto 15px;
+        }
+    }
+    &__privacy{
+        text-align: center;
+        max-width: 335px;
+        margin: 0 auto;
+        p{
+            color: #a1a1a1;
+            font-family: $fSans;
+            font-size: 11px;
+            letter-spacing: 0.5px;
+            line-height: 15px;
+            a{
+                text-decoration: underline;
+                color: #a1a1a1;
+            }
+        }
+    }
+    &__social{
+        &-item{
+            margin-right: 15px;
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+    }
+}

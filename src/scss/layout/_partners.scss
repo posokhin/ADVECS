@@ -1,0 +1,55 @@
+.partners{
+    padding: 70px 0;
+    h2{
+        margin-bottom: 50px;
+        position: relative;
+        &::after{
+            content: "";
+            display: block;
+            position: absolute;
+            right: -110px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 80px;
+            height: 5px;
+            border-radius: 3px;
+            background-color: #85c847;
+            @include media(768){
+                right: 0;
+            }
+            @include media(450){
+                top: auto;
+                bottom: -20px;
+                left: 0;
+                transform: none;
+            }
+        }
+    }
+    &__list{
+        margin: 0 -15px;
+    }
+    &__item{
+        width: 25%;
+        padding: 0 15px;
+        margin-bottom: 30px;
+        @include media(900){
+            width: 33%;
+        }
+        @include media(600){
+            width: 50%;
+        }
+    }
+    &__link{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 9% 5%;
+        width: 100%;
+        height: 100%;
+        border: 1px solid #ececed;
+        background-color: #ffffff;
+        img{
+            max-height: 99%;
+        }
+    }
+}

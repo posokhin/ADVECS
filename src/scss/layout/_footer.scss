@@ -1,0 +1,37 @@
+.footer{
+    padding: 30px 0;
+
+    &__row{
+        justify-content: space-between;
+    }
+    &__left{
+        color: #a1a1a1;
+        font-family: $fSans;
+        @include media(844){
+            width: 100%;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        p{
+            margin-right: 60px;
+        }
+        a{
+            color: #a1a1a1;
+            font-size: 15px;
+            line-height: 20px;
+            text-decoration: underline;    
+            margin-right: 60px;
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+    }
+    &__right{
+        a{
+            color: #a1a1a1;
+            span{
+                margin-right: 20px;
+            }
+        }  
+    }
+}

@@ -1,0 +1,68 @@
+.quests{
+    padding: 90px 0;
+    h2{
+        margin: 0 auto;
+        text-align: center;
+        &::after{
+            content: "";
+            display: block;
+            width: 80px;
+            height: 5px;
+            margin: 0 auto;
+            background-color: #85c847;  
+            margin-top: 24px;
+        }
+    }
+    &__list{
+        max-width: 770px;
+        margin: 36px auto 0;
+    }
+    &__item{
+        border-bottom: 1px solid #eaf0f8;
+        cursor: pointer;
+        &:hover{
+            background-color: #ffffff;
+        }
+        &.active{
+            background-color: #ffffff;
+            border: 1px solid #eaf0f8;
+            .quests__item-top .arrow{
+                transform: rotate(270deg);
+            }
+        }
+        &-top{
+            padding: 20px 30px;
+            .arrow{
+                margin-left: auto;
+                transform: rotate(90deg);
+                &::before, &::after{
+                    background: #7b4e85;
+                }
+            }
+            img{
+                margin-right: 20px;
+            }
+        }
+        &-title{
+            color: #7b4e85;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 0.28px;     
+            max-width: 60%;   
+        }
+        &-answer{
+            display: none;
+            background-color: #f7f9fd;
+            padding: 18px 0;
+            p{
+                max-width: 620px;
+                padding: 0 15px;
+                margin: 0 auto;
+                color: #515151;
+                font-family: $fSans;
+                font-size: 15px;
+                line-height: 26px;
+            }
+        }
+    }
+}

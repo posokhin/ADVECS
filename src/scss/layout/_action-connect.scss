@@ -1,0 +1,53 @@
+.action-connect{
+    padding: 70px 0;
+    background-color: #7b4e85;
+    color: white;
+    &__row{
+        max-width: 970px;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+    &__title{
+        color: white;
+        max-width: 570px;
+        width: 80%;
+        position: relative;
+        @include media(768){
+            width: 100%;
+            max-width: 100%;
+            text-align: center;
+        }
+        &::after{
+            position: absolute;
+            right: -200px;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            content: "";
+            display: block;
+            width: 121px;
+            height: 5px;
+            border-radius: 3px;
+            background-color: #85c847;   
+            @include media(930){
+                bottom: -20px;
+                top: auto;
+                left: 0;
+                transform: none;
+            }
+            @include media(768){
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+    &__btn{
+        width: 20%;
+        @include media(768){
+            width: 100%;
+            margin-top:40px;
+            a{
+                margin: 0 auto;
+            }
+        }
+    }
+}
