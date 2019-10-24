@@ -35,6 +35,22 @@ $(document).ready(function(){
         }
     });
 
+    $('.team__list').slick({
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        nextArrow: $('.team__nav-item-right'),
+        prevArrow: $('.team__nav-item-left'),
+        dots: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
 
     var phone = document.querySelectorAll('input[name="phone"]');
     phone.forEach(function(el){
@@ -58,5 +74,67 @@ $(document).ready(function(){
         $('html,body').animate({
             scrollTop: target.offset().top - 50
         },500);
+    });
+
+    function showPopupServices(){
+        $('.overlay').fadeIn();
+        $('.popup__services').fadeIn();
+    }
+    function showPopupFeedback(){
+        $('.overlay').fadeIn();
+        $('.popup__feedback').fadeIn();
+    }
+    function HidePopupFeedback(){
+        $('.popup__feedback').fadeOut();
+    }
+    function showPopupSocial(){
+        $('.overlay').fadeIn();
+        $('.popup__social').css({
+            display: 'flex'
+        }).fadeIn();
+    }
+    function HidePopup(){
+        $('.overlay').fadeOut();
+        $('.popup').fadeOut();
+    }
+    function showPopupCall(){
+        $('.overlay').fadeIn();
+        $('.popup__call').fadeIn();
+    }
+    function HidePopupCall(){
+        $('.popup__call').fadeOut();
+    }
+    function showPopupSuccess(){
+        $('.overlay').fadeIn();
+        $('.popup__call-success').fadeIn();
+    }
+    $('.js-call').on('click', function(e){
+        e.preventDefault();
+        showPopupCall();
+    });
+    $('.js-close-popup').on('click', function(){
+        HidePopup();
+    });
+    $('.js-open-success').on('click', function(e){
+        e.preventDefault();
+        HidePopupCall();
+        HidePopupFeedback();
+        showPopupSuccess();
+    });
+    $('.js-open-popup-social').on('click', showPopupSocial);
+    $('.js-open-popap-feedback').on('click', function(e){
+        e.preventDefault();
+        showPopupFeedback();
+    });
+    $('.js-open-popup-services').on('click', function(e){
+        e.preventDefault();
+        showPopupServices();
+    });
+
+    $(document).ready(function(){
+        if(!localStorage.getItem('popap-share')){
+            localStorage.setItem('popap-share', 'true');
+            var timeout = setTimeout(showPopupSocial, 3000);
+        }
     });
 });

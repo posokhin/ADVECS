@@ -11,6 +11,10 @@
 @import './blocks/_btn';
 @import './blocks/_arrow';
 @import './blocks/_social';
+@import './blocks/popup__call';
+@import './blocks/close';
+@import './blocks/overlay';
+@import './blocks/icon-social-main';
 
 @import './layout/_base';
 @import './layout/_header';
@@ -25,3 +29,4 @@
 @import './layout/_partners';
 @import './layout/_feedback';
 @import './layout/_footer';
+@import './layout/team';

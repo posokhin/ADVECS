@@ -31,7 +31,7 @@ html(lang="en")
                         .header__col.header__phone
                             .phone
                                 a(href="tel:8 812 322-00-55") 8 812 322-00-55
-                                a(href="#").js-call  Заказать звонок
+                                a(href="").js-call  Заказать звонок
                         .header__col.header__auth
                             .auth.flex-wrap.aic
                                 a(href="#feedback").btn.btn-green подключиться
@@ -52,7 +52,7 @@ html(lang="en")
                                 img(src="img/icon/phone.svg", alt="")
                             .header-mobile-menu__call-links
                                 a(href="tel:8 812 322-00-55") 8 812 322-00-55
-                                a(href="") Заказать звонок
+                                a(href="").js-call Заказать звонок
             section.b-top
                 .b-top__content
                     .container
@@ -77,7 +77,7 @@ html(lang="en")
                     h2 Инструменты metris.pro позволяют
                     ul.tools__list.flex-wrap
                         li.tools__item
-                            a(href="").tools__item-link
+                            a(href="").tools__item-link.js-open-popup-services
                                 .tools__item-icon
                                     img(src="img/icon/tools.svg", alt="")
                                 h3.tools__item-title Авансирование
@@ -86,7 +86,7 @@ html(lang="en")
                                     span подробнее
                                     .arrow
                         li.tools__item
-                            a(href="").tools__item-link
+                            a(href="").tools__item-link.js-open-popup-services
                                 .tools__item-icon
                                     img(src="img/icon/tools.svg", alt="")
                                 h3.tools__item-title Ипотека
@@ -95,7 +95,7 @@ html(lang="en")
                                     span подробнее
                                     .arrow
                         li.tools__item
-                            a(href="").tools__item-link
+                            a(href="").tools__item-link.js-open-popup-services
                                 .tools__item-icon
                                     img(src="img/icon/tools.svg", alt="")
                                 h3.tools__item-title Удобная база новостроек
@@ -104,7 +104,7 @@ html(lang="en")
                                     span подробнее
                                     .arrow
                         li.tools__item
-                            a(href="").tools__item-link
+                            a(href="").tools__item-link.js-open-popup-services
                                 .tools__item-icon
                                     img(src="img/icon/tools.svg", alt="")
                                 h3.tools__item-title Профессиональная команда
@@ -113,7 +113,7 @@ html(lang="en")
                                     span подробнее
                                     .arrow
                         li.tools__item
-                            a(href="").tools__item-link
+                            a(href="").tools__item-link.js-open-popup-services
                                 .tools__item-icon
                                     img(src="img/icon/tools.svg", alt="")
                                 h3.tools__item-title Обучение
@@ -122,7 +122,7 @@ html(lang="en")
                                     span подробнее
                                     .arrow
                         li.tools__item
-                            a(href="").tools__item-link
+                            a(href="").tools__item-link.js-open-popup-services
                                 .tools__item-icon
                                     img(src="img/icon/tools.svg", alt="")
                                 h3.tools__item-title Экскурсии
@@ -131,7 +131,7 @@ html(lang="en")
                                     span подробнее
                                     .arrow
                         li.tools__item
-                            a(href="").tools__item-link
+                            a(href="").tools__item-link.js-open-popup-services
                                 .tools__item-icon
                                     img(src="img/icon/tools.svg", alt="")
                                 h3.tools__item-title Мероприятия от застройщиков
@@ -140,7 +140,7 @@ html(lang="en")
                                     span подробнее
                                     .arrow
                         li.tools__item
-                            a(href="").tools__item-link
+                            a(href="").tools__item-link.js-open-popup-services
                                 .tools__item-icon
                                     img(src="img/icon/tools.svg", alt="")
                                 h3.tools__item-title Почему вы получаете максимум
@@ -149,7 +149,7 @@ html(lang="en")
                                     span подробнее
                                     .arrow
                         li.tools__item
-                            a(href="").tools__item-link
+                            a(href="").tools__item-link.js-open-popup-services
                                 .tools__item-icon
                                     img(src="img/icon/tools.svg", alt="")
                                 h3.tools__item-title Максимальный процент
@@ -158,7 +158,7 @@ html(lang="en")
                                     span подробнее
                                     .arrow
                         li.tools__item
-                            a(href="").tools__item-link
+                            a(href="").tools__item-link.js-open-popup-services
                                 .tools__item-icon
                                     img(src="img/icon/tools.svg", alt="")
                                 h3.tools__item-title Авансирование
@@ -167,7 +167,7 @@ html(lang="en")
                                     span подробнее
                                     .arrow
                         li.tools__item
-                            a(href="").tools__item-link
+                            a(href="").tools__item-link.js-open-popup-services
                                 .tools__item-icon
                                     img(src="img/icon/tools.svg", alt="")
                                 h3.tools__item-title Ипотека
@@ -176,7 +176,7 @@ html(lang="en")
                                     span подробнее
                                     .arrow
                         li.tools__item
-                            a(href="").tools__item-link
+                            a(href="").tools__item-link.js-open-popup-services
                                 .tools__item-icon
                                     img(src="img/icon/tools.svg", alt="")
                                 h3.tools__item-title Удобная база новостроек
@@ -279,13 +279,100 @@ html(lang="en")
                         .line
                         .action-connect__btn
                             a(href="#feedback").btn.btn-green подключиться
+            section.team
+                .container
+                    .team__nav
+                        .team__nav-item.team__nav-item-left
+                        .team__nav-item.team__nav-item-right
+                    h2 Команда
+                    ul.team__list.flex-wrap
+                        li.team__item
+                            .team__item-inner.flex-wrap
+                                .team__item-left
+                                    .team__item-img
+                                        img(src="img/team/1.png", alt="")
+                                    .team__item-title Смирнов Алексей
+                                    .team__item-desc Менеджер по продажам
+                                .team__item-right
+                                    .team__item-right-title Список застройщиков
+                                    ul.team__sublist
+                                        li.team__sublist-item Группа ЦДС
+                                        li.team__sublist-item СК Дальпитерстрой
+                                        li.team__sublist-item ГК Главстрой
+                                        li.team__sublist-item ГК Эталон
+                                        li.team__sublist-item Лидер Групп
+                                        li.team__sublist-item Мегалит
+                                        li.team__sublist-item СПб Реновация
+                                        li.team__sublist-item ГК Эталон
+                                        li.team__sublist-item Группа ЦДС
+                                        li.team__sublist-item СК Дальпитерстрой
+                        li.team__item
+                            .team__item-inner.flex-wrap
+                                .team__item-left
+                                    .team__item-img
+                                        img(src="img/team/2.png", alt="")
+                                    .team__item-title Светлана Гурская
+                                    .team__item-desc Менеджер по продажам
+                                .team__item-right
+                                    .team__item-right-title Список застройщиков
+                                    ul.team__sublist
+                                        li.team__sublist-item Группа ЦДС
+                                        li.team__sublist-item СК Дальпитерстрой
+                                        li.team__sublist-item ГК Главстрой
+                                        li.team__sublist-item ГК Эталон
+                                        li.team__sublist-item Лидер Групп
+                                        li.team__sublist-item Мегалит
+                                        li.team__sublist-item СПб Реновация
+                                        li.team__sublist-item ГК Эталон
+                                        li.team__sublist-item Группа ЦДС
+                                        li.team__sublist-item СК Дальпитерстрой
+                        li.team__item
+                            .team__item-inner.flex-wrap
+                                .team__item-left
+                                    .team__item-img
+                                        img(src="img/team/1.png", alt="")
+                                    .team__item-title Смирнов Алексей
+                                    .team__item-desc Менеджер по продажам
+                                .team__item-right
+                                    .team__item-right-title Список застройщиков
+                                    ul.team__sublist
+                                        li.team__sublist-item Группа ЦДС
+                                        li.team__sublist-item СК Дальпитерстрой
+                                        li.team__sublist-item ГК Главстрой
+                                        li.team__sublist-item ГК Эталон
+                                        li.team__sublist-item Лидер Групп
+                                        li.team__sublist-item Мегалит
+                                        li.team__sublist-item СПб Реновация
+                                        li.team__sublist-item ГК Эталон
+                                        li.team__sublist-item Группа ЦДС
+                                        li.team__sublist-item СК Дальпитерстрой
+                        li.team__item
+                            .team__item-inner.flex-wrap
+                                .team__item-left
+                                    .team__item-img
+                                        img(src="img/team/2.png", alt="")
+                                    .team__item-title Светлана Гурская
+                                    .team__item-desc Менеджер по продажам
+                                .team__item-right
+                                    .team__item-right-title Список застройщиков
+                                    ul.team__sublist
+                                        li.team__sublist-item Группа ЦДС
+                                        li.team__sublist-item СК Дальпитерстрой
+                                        li.team__sublist-item ГК Главстрой
+                                        li.team__sublist-item ГК Эталон
+                                        li.team__sublist-item Лидер Групп
+                                        li.team__sublist-item Мегалит
+                                        li.team__sublist-item СПб Реновация
+                                        li.team__sublist-item ГК Эталон
+                                        li.team__sublist-item Группа ЦДС
+                                        li.team__sublist-item СК Дальпитерстрой
             section.reviews
                 .container
                     .reviews__row.flex-wrap.aic
                         .reviews__left
                             h2 Отзывы
                             p Мы всегда рады обратной связи. Ваши слова помогают нам стать лучше и поддерживают в трудные минуты
-                            a(href="").btn.btn-purple Оставить отзыв
+                            a(href="").btn.btn-purple.js-open-popap-feedback Оставить отзыв
                         .reviews__right
                             ul.reviews__right-list
                                 li.reviews__right-item
@@ -415,7 +502,7 @@ html(lang="en")
                                 label
                                     textarea(placeholder="Ваш вопрос")
                                     .error-text * Поле необходимо заполнить
-                                button(type="submit").btn.btn-purple отправить
+                                button(type="submit").btn.btn-purple.js-open-success отправить
                                 .feedback__privacy
                                     p Нажимая кнопку «Отправить» вы соглашаетесь с 
                                         a(href="") политикой конфиденциальности
@@ -430,7 +517,80 @@ html(lang="en")
                         a(href="https://www.trinet.ru/" target="_blank").flex.aic
                             span Разработка сайта:
                             img(src="img/trinet.png", alt="")
-
+            .icon-social-main.js-open-popup-social
+                img(src="img/icon/ico-social-m.svg", alt="")
+            .overlay
+            .popup__call.popup
+                .close.js-close-popup
+                .popup__inner
+                    .popup__title Заполните форму и мы скоро перезвоним Вам!
+                    form(action="").popup__form
+                        .popup__field
+                            input(type="text" placeholder="Ваше имя" name="name")
+                        .popup__field
+                            input(type="text" placeholder="Телефон" name="phone")
+                        button.btn.btn-purple.popup__btn.js-open-success отправить
+                        .popup__policy
+                            p Нажимая кнопку «Отправить» вы соглашаетесь с 
+                                a(href="") политикой конфиденциальности
+            .popup__call-success.popup
+                .close.js-close-popup
+                .popup__inner
+                    .popup__icon
+                        img(src="img/icon/success.svg", alt="")
+                    .popup__title Спасибо!
+                    .popup__txt Спасибо за заполнение формы! Мы скоро перезвоним Вам!
+                    button.btn.btn-purple.popup__btn.js-close-popup Ок
+            .popup__social.popup.flex-wrap
+                .close.js-close-popup
+                .popup__img
+                    img(src="img/iphone.png", alt="")
+                .popup__inner
+                    .popup__title Следите за нами в социальных сетях!
+                    .popup__txt Следите за нами в социальных сетях, узнавайте полезную информацию, пишите для уточнения информации.
+                    ul.social.flex-wrap.popup__social-list
+                        li.social__item
+                            a(href="").telegram
+                        li.social__item
+                            a(href="").instagram
+                        li.social__item
+                            a(href="").youtube
+                        li.social__item
+                            a(href="").vk
+            .popup__feedback.popup
+                .close.js-close-popup
+                .popup__inner
+                    .popup__title Спасибо, что помогаете нам стать лучше!
+                    form(action="").popup__form
+                        .popup__field
+                            input(type="text" placeholder="Ваше имя" name="name")
+                        .popup__field
+                            input(type="text" placeholder="Компания" name="company")
+                        .popup__field
+                            input(type="text" placeholder="Email" name="email")
+                        .popup__field
+                            input(type="text" placeholder="Телефон" name="phone")
+                        .popup__field
+                            textarea(placeholder="Ваш отзыв")
+                        button.btn.btn-purple.popup__btn.js-open-success отправить
+                        .popup__policy
+                            p Нажимая кнопку «Отправить» вы соглашаетесь с 
+                                a(href="") политикой конфиденциальности
+            .popup__services.popup
+                .close.js-close-popup
+                .popup__inner
+                    .popup__icon
+                        img(src="img/icon/ico-popup-s.svg", alt="")
+                    .popup__content
+                        .popup__title Профессиональная команда
+                        .popup__content-desc Вам всегда помогут в наши опытные и квалифицированные сотрудники, на связи партнерский отдел, управляющие по проектам, координаторы и ипотечные специалисты.
+                        .popup__content-txt
+                            p Работаем по графику 24/7, всегда готовы ответить на ваши вопросы, и в случае необходимости, сопроводить вашего клиента на сделке.
+                            p Мы ценим и уважаем наших партнеров и стремимся предоставлять лучший сервис по сопровождению сделок. Работая с нами, вы получаете личных кураторов, в лице наших управляющих по каждому объекту и застройщику, к которым вы можете обратиться в любое время и получить помощь в своем вопросе. 
+                            p.purple Наш опыт работы и профессионализм – залог успеха ваших сделок и гарант вашей эффективной и прибыльной работы в будущем. 
+                            p Работаем по графику 24/7, всегда готовы ответить на ваши вопросы, и в случае необходимости, сопроводить вашего клиента на сделке.
+                            p Мы ценим и уважаем наших партнеров и стремимся предоставлять лучший сервис по сопровождению сделок. Работая с нами, вы получаете личных кураторов, в лице наших управляющих по каждому объекту и застройщику, к которым вы можете обратиться в любое время и получить помощь в своем вопросе. 
+                            p.purple Наш опыт работы и профессионализм – залог успеха ваших сделок и гарант вашей эффективной и прибыльной работы в будущем. 
         script(src="js/jquery.min.js")
         script(src="js/slick.min.js")
         script(src="js/imask.min.js")

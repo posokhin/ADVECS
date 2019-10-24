@@ -1,0 +1,16 @@
+.icon-social-main{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fa6400;   
+    position: fixed;
+    right: 12%;
+    bottom: 70px;
+    img{
+        padding: 12px 8px 9px;
+    }
+}
