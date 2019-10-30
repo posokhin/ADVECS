@@ -8,7 +8,7 @@ html(lang="en")
         link(rel="stylesheet", href="style.css")
     body
         .wrapper
-            ul.social.social__fix
+            //ul.social.social__fix
                 li.social__item
                     a(href="").telegram 
                 li.social__item
@@ -34,7 +34,7 @@ html(lang="en")
                                 a(href="").js-call  Заказать звонок
                         .header__col.header__auth
                             .auth.flex-wrap.aic
-                                a(href="#feedback").btn.btn-green подключиться
+                                a(href="").btn.btn-green.js-open-popup-connect подключиться
                                 a(href="").btn.btn-purple войти
                         .header__col
                             .header__burger
@@ -60,7 +60,7 @@ html(lang="en")
                             .b-top__content-logo
                                 img(src="img/b-top-logo.svg", alt="")
                             h1.b-top__content-title Официальный партнер системы «Метрис» в Санкт-Петербурге
-                            a(href="#feedback").btn.btn-green подключиться
+                            a(href="").btn.btn-green.js-open-popup-connect подключиться
                         a(href="").b-top__all-btn
                             span все сервисы
                             img(src="img/icon/arrow-down.svg", alt="")
@@ -268,7 +268,7 @@ html(lang="en")
                                 li.connect__item
                                     .connect__item-title 2 Второй пункт
                                     p Практика показывает, что существуют менеджеры по продажам, способные самостоятельно планировать и осуществлять свои действия. Но также встречается иная ситуация. Поэтому за работой сотрудников необходим постоянный контроль.и осуществлять свои действия. Но также встречается иная ситуация. Поэтому за работой сотрудников необходим постоянный контроль.
-                            a(href="").btn.btn-icon.connect__btn.flex.aic.jcc
+                            a(href="").btn.btn-icon.connect__btn.flex.aic.jcc.js-open-popup-services-non-icon
                                 | читать все
                                 .icon.flex.aic.jcc
                                     .arrow
@@ -293,6 +293,7 @@ html(lang="en")
                                         img(src="img/team/1.png", alt="")
                                     .team__item-title Смирнов Алексей
                                     .team__item-desc Менеджер по продажам
+                                    .team__item-desc Менеджер по продажам
                                 .team__item-right
                                     .team__item-right-title Список застройщиков
                                     ul.team__sublist
@@ -312,6 +313,7 @@ html(lang="en")
                                     .team__item-img
                                         img(src="img/team/2.png", alt="")
                                     .team__item-title Светлана Гурская
+                                    .team__item-desc Менеджер по продажам
                                     .team__item-desc Менеджер по продажам
                                 .team__item-right
                                     .team__item-right-title Список застройщиков
@@ -333,6 +335,7 @@ html(lang="en")
                                         img(src="img/team/1.png", alt="")
                                     .team__item-title Смирнов Алексей
                                     .team__item-desc Менеджер по продажам
+                                    .team__item-desc Менеджер по продажам
                                 .team__item-right
                                     .team__item-right-title Список застройщиков
                                     ul.team__sublist
@@ -352,6 +355,7 @@ html(lang="en")
                                     .team__item-img
                                         img(src="img/team/2.png", alt="")
                                     .team__item-title Светлана Гурская
+                                    .team__item-desc Менеджер по продажам
                                     .team__item-desc Менеджер по продажам
                                 .team__item-right
                                     .team__item-right-title Список застройщиков
@@ -576,11 +580,43 @@ html(lang="en")
                         .popup__policy
                             p Нажимая кнопку «Отправить» вы соглашаетесь с 
                                 a(href="") политикой конфиденциальности
+            .popup__feedback.popup__connect.popup
+                .close.js-close-popup
+                .popup__inner
+                    .popup__title Напишите нам! - Мы ответим!
+                    form(action="").popup__form
+                        .popup__field
+                            input(type="text" placeholder="Ваше имя" name="name")
+                        .popup__field
+                            input(type="text" placeholder="Компания" name="company")
+                        .popup__field
+                            input(type="text" placeholder="Email" name="email")
+                        .popup__field
+                            input(type="text" placeholder="Телефон" name="phone")
+                        .popup__field
+                            textarea(placeholder="Ваш вопрос")
+                        button.btn.btn-purple.popup__btn.js-open-success отправить
+                        .popup__policy
+                            p Нажимая кнопку «Отправить» вы соглашаетесь с 
+                                a(href="") политикой конфиденциальности
             .popup__services.popup
                 .close.js-close-popup
                 .popup__inner
                     .popup__icon
                         img(src="img/icon/ico-popup-s.svg", alt="")
+                    .popup__content
+                        .popup__title Профессиональная команда
+                        .popup__content-desc Вам всегда помогут в наши опытные и квалифицированные сотрудники, на связи партнерский отдел, управляющие по проектам, координаторы и ипотечные специалисты.
+                        .popup__content-txt
+                            p Работаем по графику 24/7, всегда готовы ответить на ваши вопросы, и в случае необходимости, сопроводить вашего клиента на сделке.
+                            p Мы ценим и уважаем наших партнеров и стремимся предоставлять лучший сервис по сопровождению сделок. Работая с нами, вы получаете личных кураторов, в лице наших управляющих по каждому объекту и застройщику, к которым вы можете обратиться в любое время и получить помощь в своем вопросе. 
+                            p.purple Наш опыт работы и профессионализм – залог успеха ваших сделок и гарант вашей эффективной и прибыльной работы в будущем. 
+                            p Работаем по графику 24/7, всегда готовы ответить на ваши вопросы, и в случае необходимости, сопроводить вашего клиента на сделке.
+                            p Мы ценим и уважаем наших партнеров и стремимся предоставлять лучший сервис по сопровождению сделок. Работая с нами, вы получаете личных кураторов, в лице наших управляющих по каждому объекту и застройщику, к которым вы можете обратиться в любое время и получить помощь в своем вопросе. 
+                            p.purple Наш опыт работы и профессионализм – залог успеха ваших сделок и гарант вашей эффективной и прибыльной работы в будущем. 
+            .popup__services.popup__services-non-icon.popup
+                .close.js-close-popup
+                .popup__inner
                     .popup__content
                         .popup__title Профессиональная команда
                         .popup__content-desc Вам всегда помогут в наши опытные и квалифицированные сотрудники, на связи партнерский отдел, управляющие по проектам, координаторы и ипотечные специалисты.

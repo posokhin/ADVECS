@@ -9,12 +9,16 @@
   </head>
   <body>
     <div class="wrapper">
-      <ul class="social social__fix">
-        <li class="social__item"><a class="telegram" href=""> </a></li>
-        <li class="social__item"><a class="instagram" href=""> </a></li>
-        <li class="social__item"><a class="youtube" href=""> </a></li>
-        <li class="social__item"><a class="vk" href=""> </a></li>
-      </ul>
+      <!--ul.social.social__fix
+      li.social__item
+          a(href="").telegram 
+      li.social__item
+          a(href="").instagram 
+      li.social__item
+          a(href="").youtube 
+      li.social__item
+          a(href="").vk 
+      -->
       <header class="header">
         <div class="container">
           <div class="header__row flex-wrap aic">
@@ -28,7 +32,7 @@
               <div class="phone"><a href="tel:8 812 322-00-55">8 812 322-00-55</a><a class="js-call" href=""> Заказать звонок</a></div>
             </div>
             <div class="header__col header__auth">
-              <div class="auth flex-wrap aic"><a class="btn btn-green" href="#feedback">подключиться</a><a class="btn btn-purple" href="">войти</a></div>
+              <div class="auth flex-wrap aic"><a class="btn btn-green js-open-popup-connect" href="">подключиться</a><a class="btn btn-purple" href="">войти</a></div>
             </div>
             <div class="header__col">
               <div class="header__burger"><span></span></div>
@@ -52,7 +56,7 @@
           <div class="container">
             <div class="b-top__content-inner">
               <div class="b-top__content-logo"><img src="img/b-top-logo.svg" alt=""/></div>
-              <h1 class="b-top__content-title">Официальный партнер системы «Метрис» в Санкт-Петербурге</h1><a class="btn btn-green" href="#feedback">подключиться</a>
+              <h1 class="b-top__content-title">Официальный партнер системы «Метрис» в Санкт-Петербурге</h1><a class="btn btn-green js-open-popup-connect" href="">подключиться</a>
             </div><a class="b-top__all-btn" href=""><span>все сервисы</span><img src="img/icon/arrow-down.svg" alt=""/></a>
           </div>
         </div>
@@ -269,7 +273,7 @@
                   <div class="connect__item-title">2 Второй пункт</div>
                   <p>Практика показывает, что существуют менеджеры по продажам, способные самостоятельно планировать и осуществлять свои действия. Но также встречается иная ситуация. Поэтому за работой сотрудников необходим постоянный контроль.и осуществлять свои действия. Но также встречается иная ситуация. Поэтому за работой сотрудников необходим постоянный контроль.</p>
                 </li>
-              </ul><a class="btn btn-icon connect__btn flex aic jcc" href="">читать все
+              </ul><a class="btn btn-icon connect__btn flex aic jcc js-open-popup-services-non-icon" href="">читать все
                 <div class="icon flex aic jcc">
                   <div class="arrow"></div>
                 </div></a>
@@ -300,6 +304,7 @@
                   <div class="team__item-img"><img src="img/team/1.png" alt=""/></div>
                   <div class="team__item-title">Смирнов Алексей</div>
                   <div class="team__item-desc">Менеджер по продажам</div>
+                  <div class="team__item-desc">Менеджер по продажам</div>
                 </div>
                 <div class="team__item-right">
                   <div class="team__item-right-title">Список застройщиков</div>
@@ -323,6 +328,7 @@
                 <div class="team__item-left">
                   <div class="team__item-img"><img src="img/team/2.png" alt=""/></div>
                   <div class="team__item-title">Светлана Гурская</div>
+                  <div class="team__item-desc">Менеджер по продажам</div>
                   <div class="team__item-desc">Менеджер по продажам</div>
                 </div>
                 <div class="team__item-right">
@@ -348,6 +354,7 @@
                   <div class="team__item-img"><img src="img/team/1.png" alt=""/></div>
                   <div class="team__item-title">Смирнов Алексей</div>
                   <div class="team__item-desc">Менеджер по продажам</div>
+                  <div class="team__item-desc">Менеджер по продажам</div>
                 </div>
                 <div class="team__item-right">
                   <div class="team__item-right-title">Список застройщиков</div>
@@ -371,6 +378,7 @@
                 <div class="team__item-left">
                   <div class="team__item-img"><img src="img/team/2.png" alt=""/></div>
                   <div class="team__item-title">Светлана Гурская</div>
+                  <div class="team__item-desc">Менеджер по продажам</div>
                   <div class="team__item-desc">Менеджер по продажам</div>
                 </div>
                 <div class="team__item-right">
@@ -621,10 +629,54 @@
           </form>
         </div>
       </div>
+      <div class="popup__feedback popup__connect popup">
+        <div class="close js-close-popup"></div>
+        <div class="popup__inner">
+          <div class="popup__title">Напишите нам! - Мы ответим!</div>
+          <form class="popup__form" action="">
+            <div class="popup__field">
+              <input type="text" placeholder="Ваше имя" name="name"/>
+            </div>
+            <div class="popup__field">
+              <input type="text" placeholder="Компания" name="company"/>
+            </div>
+            <div class="popup__field">
+              <input type="text" placeholder="Email" name="email"/>
+            </div>
+            <div class="popup__field">
+              <input type="text" placeholder="Телефон" name="phone"/>
+            </div>
+            <div class="popup__field">
+              <textarea placeholder="Ваш вопрос"></textarea>
+            </div>
+            <button class="btn btn-purple popup__btn js-open-success">отправить</button>
+            <div class="popup__policy">
+              <p>Нажимая кнопку «Отправить» вы соглашаетесь с <a href="">политикой конфиденциальности</a></p>
+            </div>
+          </form>
+        </div>
+      </div>
       <div class="popup__services popup">
         <div class="close js-close-popup"></div>
         <div class="popup__inner">
           <div class="popup__icon"><img src="img/icon/ico-popup-s.svg" alt=""/></div>
+          <div class="popup__content">
+            <div class="popup__title">Профессиональная команда</div>
+            <div class="popup__content-desc">Вам всегда помогут в наши опытные и квалифицированные сотрудники, на связи партнерский отдел, управляющие по проектам, координаторы и ипотечные специалисты.</div>
+            <div class="popup__content-txt">
+              <p>Работаем по графику 24/7, всегда готовы ответить на ваши вопросы, и в случае необходимости, сопроводить вашего клиента на сделке.</p>
+              <p>Мы ценим и уважаем наших партнеров и стремимся предоставлять лучший сервис по сопровождению сделок. Работая с нами, вы получаете личных кураторов, в лице наших управляющих по каждому объекту и застройщику, к которым вы можете обратиться в любое время и получить помощь в своем вопросе. </p>
+              <p class="purple">Наш опыт работы и профессионализм – залог успеха ваших сделок и гарант вашей эффективной и прибыльной работы в будущем. </p>
+              <p>Работаем по графику 24/7, всегда готовы ответить на ваши вопросы, и в случае необходимости, сопроводить вашего клиента на сделке.</p>
+              <p>Мы ценим и уважаем наших партнеров и стремимся предоставлять лучший сервис по сопровождению сделок. Работая с нами, вы получаете личных кураторов, в лице наших управляющих по каждому объекту и застройщику, к которым вы можете обратиться в любое время и получить помощь в своем вопросе. </p>
+              <p class="purple">Наш опыт работы и профессионализм – залог успеха ваших сделок и гарант вашей эффективной и прибыльной работы в будущем. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup__services popup__services-non-icon popup">
+        <div class="close js-close-popup"></div>
+        <div class="popup__inner">
           <div class="popup__content">
             <div class="popup__title">Профессиональная команда</div>
             <div class="popup__content-desc">Вам всегда помогут в наши опытные и квалифицированные сотрудники, на связи партнерский отдел, управляющие по проектам, координаторы и ипотечные специалисты.</div>
